@@ -4,16 +4,15 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("example")
-public interface LizardmanShamanMinionSpawnSoundConfig extends Config
-{
+@ConfigGroup("lizardmanshamanminionspawnsound")
+public interface ShamanSoundConfig extends Config {
 	@ConfigItem(
-		keyName = "greeting",
-		name = "Welcome Greeting",
-		description = "The message to show to the user when they login"
+			keyName = "volume",
+			name = "Minion Spawn Volume",
+			description = "The volume of the minion spawn sound"
 	)
-	default String greeting()
+	default int volume()
 	{
-		return "Hello";
+		return 100;
 	}
 }
