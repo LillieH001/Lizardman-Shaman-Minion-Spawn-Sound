@@ -19,12 +19,12 @@ import net.runelite.client.config.ConfigManager;
 		loadWhenOutdated = true
 )
 
-public class ShamanSound extends Plugin {
+public class LizardmanShamanMinionSpawnSound extends Plugin {
 	@Inject
 	private Client client;
 
 	@Inject
-	private ShamanSoundConfig config;
+	private LizardmanShamanMinionSpawnSoundConfig config;
 
 	@Subscribe
 	private void onNpcSpawned(NpcSpawned npcSpawned)
@@ -41,8 +41,8 @@ public class ShamanSound extends Plugin {
 	}
 
 	@Provides
-	ShamanSoundConfig provideConfig(ConfigManager configManager)
+	LizardmanShamanMinionSpawnSoundConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(ShamanSoundConfig.class);
+		return configManager.getConfig(LizardmanShamanMinionSpawnSoundConfig.class);
 	}
 }

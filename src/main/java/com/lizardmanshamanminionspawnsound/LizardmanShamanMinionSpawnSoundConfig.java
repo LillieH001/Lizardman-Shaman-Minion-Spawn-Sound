@@ -5,7 +5,7 @@ import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
 @ConfigGroup("lizardmanshamanminionspawnsound")
-public interface ShamanSoundConfig extends Config {
+public interface LizardmanShamanMinionSpawnSoundConfig extends Config {
 	@ConfigItem(
 			keyName = "volume",
 			name = "Minion Spawn Volume",
