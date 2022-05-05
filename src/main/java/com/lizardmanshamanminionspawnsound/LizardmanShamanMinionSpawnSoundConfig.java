@@ -225,13 +225,13 @@ public interface LizardmanShamanMinionSpawnSoundConfig extends Config {
 		return 100;
 	}
 
-	/* // Game NPC Teleport Woosh Options
+	// Game NPC Teleport Woosh Options
 
 	@ConfigItem(
-			position = 2,
+			position = 14,
 			keyName = "gameNPCTeleportWoosh",
 			name = "NPC Teleport Woosh",
-			description = "Plays the npc teleport woosh sound on minion spawn",
+			description = "Plays the NPC Teleport Woosh sound on minion spawn",
 			section = gameSection
 	)
 	default boolean gameNPCTeleportWoosh()
@@ -240,14 +240,14 @@ public interface LizardmanShamanMinionSpawnSoundConfig extends Config {
 	}
 
 	@ConfigItem(
-			position = 3,
+			position = 15,
 			keyName = "gameNPCTeleportWooshVolume",
 			name = "NPC Teleport Woosh Volume",
-			description = "The volume of the npc teleport woosh sound on minion spawn",
+			description = "The volume of the NPC Teleport Woosh sound on minion spawn",
 			section = gameSection
 	)
 	default int gameNPCTeleportWooshVolume()
 	{
 		return 100;
-	} */
+	}
 }

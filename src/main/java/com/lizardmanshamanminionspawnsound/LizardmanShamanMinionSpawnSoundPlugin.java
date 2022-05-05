@@ -21,7 +21,7 @@ import java.awt.*;
 		loadWhenOutdated = true
 )
 
-public class LizardmanShamanMinionSpawnSound extends Plugin {
+public class LizardmanShamanMinionSpawnSoundPlugin extends Plugin {
 	@Inject
 	private Client client;
 
@@ -35,8 +35,7 @@ public class LizardmanShamanMinionSpawnSound extends Plugin {
 
 		switch (npc.getId())
 		{
-			// case NpcID.SPAWN_6768:
-			case NpcID.FROG_8702:
+			case NpcID.SPAWN_6768:
 				log.info("Minion Spawned");
 				if (config.windowsErrorBeep() == true) {
 					Toolkit.getDefaultToolkit().beep();
@@ -62,9 +61,9 @@ public class LizardmanShamanMinionSpawnSound extends Plugin {
 				if (config.gameGeCoinTinkle() == true) {
 					client.playSoundEffect(SoundEffectID.GE_COIN_TINKLE, config.gameGeCoinTinkleVolume());
 				}
-				/* if (config.gameNPCTeleportWoosh() == true) {
+				if (config.gameNPCTeleportWoosh() == true) {
 					client.playSoundEffect(SoundEffectID.NPC_TELEPORT_WOOSH, config.gameNPCTeleportWooshVolume());
-				} */
+				}
 				break;
 		}
 	}
