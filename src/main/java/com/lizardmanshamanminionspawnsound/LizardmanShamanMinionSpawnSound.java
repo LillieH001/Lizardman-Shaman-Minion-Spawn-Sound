@@ -9,8 +9,10 @@ import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.api.NPC;
 import net.runelite.api.NpcID;
+import net.runelite.api.SoundEffectID;
 import net.runelite.api.events.NpcSpawned;
 import net.runelite.client.config.ConfigManager;
+import java.awt.*;
 
 @Slf4j
 @PluginDescriptor(
@@ -33,9 +35,36 @@ public class LizardmanShamanMinionSpawnSound extends Plugin {
 
 		switch (npc.getId())
 		{
-			case NpcID.SPAWN_6768:
-				log.info("Spawn Spawned");
-				client.playSoundEffect(2596, config.volume());
+			// case NpcID.SPAWN_6768:
+			case NpcID.FROG_8702:
+				log.info("Minion Spawned");
+				if (config.windowsErrorBeep() == true) {
+					Toolkit.getDefaultToolkit().beep();
+				}
+				if (config.gameAttackHit() == true) {
+					client.playSoundEffect(SoundEffectID.ATTACK_HIT, config.gameAttackHitVolume());
+				}
+				if (config.gameBuryBones() == true) {
+					client.playSoundEffect(SoundEffectID.BURY_BONES, config.gameBuryBonesVolume());
+				}
+				if (config.gameCloseDoor() == true) {
+					client.playSoundEffect(SoundEffectID.CLOSE_DOOR, config.gameCloseDoorVolume());
+				}
+				if (config.gameCookWoosh() == true) {
+					client.playSoundEffect(SoundEffectID.COOK_WOOSH, config.gameCookWooshVolume());
+				}
+				if (config.gameFireWoosh() == true) {
+					client.playSoundEffect(SoundEffectID.FIRE_WOOSH, config.gameFireWooshVolume());
+				}
+				if (config.gameGeAddOfferDingaling() == true) {
+					client.playSoundEffect(SoundEffectID.GE_ADD_OFFER_DINGALING, config.gameGeAddOfferDingalingVolume());
+				}
+				if (config.gameGeCoinTinkle() == true) {
+					client.playSoundEffect(SoundEffectID.GE_COIN_TINKLE, config.gameGeCoinTinkleVolume());
+				}
+				/* if (config.gameNPCTeleportWoosh() == true) {
+					client.playSoundEffect(SoundEffectID.NPC_TELEPORT_WOOSH, config.gameNPCTeleportWooshVolume());
+				} */
 				break;
 		}
 	}
