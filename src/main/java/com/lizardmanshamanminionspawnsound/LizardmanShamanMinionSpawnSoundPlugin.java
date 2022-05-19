@@ -17,8 +17,7 @@ import java.awt.*;
 @Slf4j
 @PluginDescriptor(
 		name = "Lizardman Shaman Minion Spawn Sound",
-		description = "Plays an sound effect when Lizardman Shaman spawns a Minion",
-		loadWhenOutdated = true
+		description = "Plays an sound effect when Lizardman Shaman spawns a Minion"
 )
 
 public class LizardmanShamanMinionSpawnSoundPlugin extends Plugin {
